@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     int notifyId2 = 5678;
     int notifyId3 = 9678;
     private int LOCATION_PERMISSION_CODE=133;
-    Button btnRq;
+
     NotificationManagerCompat notificationManagerCompat;
     String ar3="shahbag";
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -50,10 +50,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btnRq=findViewById(R.id.button);
-        btnRq.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+
                 if(ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)== PackageManager.PERMISSION_GRANTED){
                     Toast.makeText(MainActivity.this,"Permission granted alredy",Toast.LENGTH_SHORT).show();
                 }
@@ -62,8 +59,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
 
-            }
-        });
+
         list=new ArrayList<MyDoes>();
         sendOnChannel1("shakalaka","boom");
         reference= FirebaseDatabase.getInstance().getReference().child("DoesApp");

@@ -7,11 +7,10 @@
     android:gravity="center"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Uses permission"
-        ></Button>
+        android:text="Only notifications!!"
+        ></TextView>
 
 </LinearLayout>
